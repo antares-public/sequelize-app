@@ -1,0 +1,19 @@
+{
+  "development": {
+    "use_env_variable": "DATABASE_URL",
+    "minifyAliases": true,
+    "logging": false
+  },
+  "test": {
+    "storage": ":memory:",
+    "dialect": "sqlite",
+    "retry": {
+      "max": 10
+    }
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "minifyAliases": false,
+    "logging": true
+  }
+}
