@@ -1,6 +1,6 @@
 const express = require("express");
 const {
-  signUp,
+  createUser: signUp,
   updateUser,
   getUsers,
   getUser,
@@ -11,7 +11,7 @@ const {
 
 const router = express.Router();
 
-router.post("/sign-up", signUp);
+router.post("/users", signUp);
 
 router.put("/users/:id", updateUser);
 

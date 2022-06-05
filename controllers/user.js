@@ -1,7 +1,7 @@
 const User = require("../models").User;
 
 module.exports = {
-  signUp: (req, res) => {
+  createUser: (req, res) => {
     let { firstName, lastName, email } = req.body;
     User.create({
       firstName,
