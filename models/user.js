@@ -1,4 +1,5 @@
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {}
@@ -14,5 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "User",
     }
   );
+  User.addScope('test', {
+    where: {
+      firstName: 'test',
+    },
+  });
   return User;
 };
